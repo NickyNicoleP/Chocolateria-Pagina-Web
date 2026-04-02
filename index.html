@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cacao & Alma — Chocolatería Artesanal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar">
+    <a href="#" class="logo">
+      <span class="logo-dot"></span>
+      Cacao &amp; Alma
+    </a>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#historia">Historia</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="cart-btn" onclick="openCart()" aria-label="Carrito">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      <span class="cart-badge" id="cartCount">0</span>
+    </button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="inicio" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-swirl">
+      <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+        <circle cx="900" cy="200" r="300" fill="none" stroke="#B8973A" stroke-width="0.5"/>
+        <circle cx="900" cy="200" r="250" fill="none" stroke="#B8973A" stroke-width="0.5"/>
+        <circle cx="200" cy="600" r="200" fill="none" stroke="#B8973A" stroke-width="0.5"/>
+        <path d="M0,400 Q300,200 600,400 T1200,400" fill="none" stroke="#B8973A" stroke-width="0.5"/>
+        <path d="M0,500 Q300,300 600,500 T1200,500" fill="none" stroke="#B8973A" stroke-width="0.5"/>
+      </svg>
+    </div>
+
+    <div class="hero-content" id="heroContent">
+      <p class="hero-eyebrow">Chocolatería Artesanal de Lujo</p>
+      <h1 class="hero-title">
+        Arte en cada<br><em>pieza de</em><br>Chocolate
+      </h1>
+      <p class="hero-subtitle">
+        Sabores que emocionan, texturas que enamoran,<br>
+        momentos que perduran para siempre.
+      </p>
+      <a href="#productos" class="hero-btn">
+        Ver Catálogo
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Explorar</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── PRODUCTOS ── -->
+  <section id="productos">
+    <p class="section-eyebrow fade-up">Colección</p>
+    <h2 class="section-title fade-up d1">Nuestras <em>Creaciones</em></h2>
+    <p class="section-desc fade-up d2">
+      Cada pieza es elaborada a mano con cacao fino de origen,
+      para despertar sensaciones únicas e inigualables.
+    </p>
+
+    <div class="products-grid">
+
+      <!-- Tarjeta 1 (con imagen real) -->
+      <div class="product-card fade-up d1">
+        <div class="product-img">
+          <div class="product-img-inner">
+            <img src="CHOCOLATE1.JPG" alt="Trufas de Lavanda">
+          </div>
+          <div class="product-label">Bestseller</div>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Trufas de Lavanda</h3>
+          <p class="product-desc">
+            Ganache de chocolate negro 72% infusionado con lavanda de Provenza.
+            Un equilibrio floral y profundo.
+          </p>
+          <div class="product-footer">
+            <div class="product-price">Bs. 48 <span>/ caja de 6</span></div>
+            <button class="add-btn" onclick="addToCart('Trufas de Lavanda', 48)">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              Añadir
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 (emoji, puedes reemplazar después) -->
+      <div class="product-card fade-up d2">
+        <div class="product-img">
+          <div class="product-img-inner img-dark">
+            <img src="CHOCOLATE2.JPG" alt="Huevos de Pascua Rellenos">
+          </div>
+          <div class="product-label">Edición Especial</div>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Huevos de Pascua Rellenos</h3>
+          <p class="product-desc">
+            Cacao 85% de Beni, Bolivia. Tostado artesanal con notas de
+            frutos rojos y tierra húmeda.
+          </p>
+          <div class="product-footer">
+            <div class="product-price">Bs. 65 <span>/ unidad</span></div>
+            <button class="add-btn" onclick="addToCart('Huevos de Pascua Rellenos', 65)">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              Añadir
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 (emoji, puedes reemplazar después) -->
+      <div class="product-card fade-up d3">
+        <div class="product-img">
+          <div class="product-img-inner img-warm">
+            <img src="Chocolate3.jpg" alt="Pop Cakes">
+          </div>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Pop Cakes  </h3>
+          <p class="product-desc">
+            Delicado chocolate con leche 45% que envuelve un corazón de caramelo cremoso. 
+            Textura suave que se deshace en el paladar, ideal para un momento de puro placer.
+          </p>
+          <div class="product-footer">
+            <div class="product-price">Bs. 55 <span>/ caja de 8</span></div>
+            <button class="add-btn" onclick="addToCart('Bombones de Ají', 55)">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              Añadir
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── HISTORIA ── -->
+  <section id="historia">
+    <div class="historia-inner">
+
+      <div class="historia-text">
+        <p class="section-eyebrow fade-up">Nuestra historia</p>
+        <h2 class="section-title historia-title fade-up d1">Del grano al <em>alma</em></h2>
+        <p class="historia-body fade-up d2">
+          En los valles andinos de Bolivia, donde el cacao crece entre niebla y sol,
+          nació Cacao &amp; Alma. En 2007, nuestra fundadora Valentina Cruz aprendió
+          el arte del chocolate de su abuela, quien guardaba secretos milenarios de
+          fermentación.
+        </p>
+        <p class="historia-body fade-up d2">
+          Hoy, cada tableta, cada trufa, cada bombón que creamos es un homenaje a esa
+          tradición. Trabajamos directamente con familias cacaoteras, pagando precios
+          justos y garantizando que el sabor auténtico de los Yungas llegue a tu paladar.
+        </p>
+        <div class="historia-signature fade-up d3">— Valentina Cruz, Fundadora</div>
+      </div>
+
+      <div class="historia-img fade-up d2">
+        <div class="historia-img-box">
+          <span class="historia-emoji">
+            <img src="LOGO.PNG" alt="LOGO">
+          </span>
+        </div>
+        <div class="historia-frame"></div>
+        <div class="historia-badge">
+          <strong>17</strong>
+          <small>Años de<br>artesanía</small>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer id="contacto">
+    <div class="footer-grid">
+
+      <div>
+        <p class="footer-brand-name">Cacao &amp; Alma</p>
+        <p class="footer-brand-tag">Chocolatería artesanal desde 2007</p>
+        <div class="social-links">
+          <a class="social-link" href="#">ig</a>
+          <a class="social-link" href="#">fb</a>
+          <a class="social-link" href="#">tw</a>
+          <a class="social-link" href="#">yt</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visítanos</h4>
+        <p class="footer-address">
+          Calle Sagárnaga 432<br>
+          La Paz, Bolivia<br><br>
+          Lun–Sáb: 9am – 8pm<br>
+          Dom: 10am – 5pm<br><br>
+          +591 2 222 8800<br>
+          hola@cacaoalma.bo
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p class="footer-address footer-newsletter-desc">
+          Recibe nuestras colecciones de temporada y ofertas exclusivas
+          directamente en tu correo.
+        </p>
+        <div class="newsletter-form">
+          <input
+            class="newsletter-input"
+            type="email"
+            placeholder="tu@correo.com"
+            id="emailInput"
+          >
+          <button class="newsletter-submit" onclick="subscribe()">Unirme</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2024 Cacao &amp; Alma. Todos los derechos reservados.</span>
+      <span>Hecho con amor en La Paz, Bolivia 🍫</span>
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
