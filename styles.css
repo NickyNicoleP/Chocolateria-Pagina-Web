@@ -810,6 +810,102 @@ footer {
 .toast.show {
   transform: translateX(-50%) translateY(0);
 }
+/* ═══════════════════════════════
+   Cubo rotatorio
+═══════════════════════════════ */
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lado{
+    height: 100px;
+    width: 100px;
+    animation: girar 4s linear infinite;
+    position: absolute;
+    opacity: 0.9;
+    cursor: pointer;
+}
+@keyframes girar{
+    from{
+        transform: rotateY(360deg) translateZ(50px);
+        z-index: 10;
+    }
+    50%{
+        z-index: -10;
+    }
+    to{
+        transform: rotateY(0deg) translateZ(50px);
+        z-index: 10;
+    }
+}
+#lado_d{
+    background-image: url(imagenes/16\ sin\ título_20251025190406_070532.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#lado_d:hover{
+    box-shadow: 0px 0px 43px 0px rgb(250, 0, 0);
+-webkit-box-shadow: 0px 0px 43px 0px rgba(250, 0, 0);
+-moz-box-shadow:  0px 0px 43px 0px rgba(250, 0, 0);
+}
+#lado_c{
+    background-image: url(imagenes/Screenshot_20251025-220240-269.png);
+    background-size: cover;
+    background-position: center;
+    animation-delay: -1s;
+}
+#lado_c:hover{
+    box-shadow: 0px 0px 43px 0px rgb(42, 250, 0);
+-webkit-box-shadow: 0px 0px 43px 0px rgb(42, 250, 0);
+-moz-box-shadow:  0px 0px 43px 0px rgba(42, 250, 0);
+}
+#lado_b{
+    background-image: url(imagenes/Screenshot_20251030-094112\ \(1\).png);
+    background-size: cover;
+    background-position: center;
+    animation-delay: -2s;
+}
+#lado_b:hover{
+    box-shadow: 0px 0px 43px 0px rgb(3, 252, 244);
+-webkit-box-shadow: 0px 0px 43px 0px rgb(3, 252, 244);
+-moz-box-shadow:  0px 0px 43px 0px rgba(3, 252, 244);
+}
+
+#lado_a{
+    background-image: url(imagenes/Screenshot_20251030-094252\ \(1\)\ \(1\).png);
+    background-size: cover;
+    background-position: center;
+    animation-delay: -3s;
+}
+#lado_a:hover{
+    box-shadow: 0px 0px 43px 0px rgb(255, 0, 187);
+-webkit-box-shadow: 0px 0px 43px 0px rgb(255, 0, 187);
+-moz-box-shadow:  0px 0px 43px 0px rgba(255, 0, 187);
+}
+/*top*/
+.lado_2{
+    height: 100px;
+    width: 100px;
+    animation: girar_2 4s linear infinite;
+    position: absolute;
+}
+@keyframes girar_2{
+    from{
+        transform: rotateY(360deg) rotateX(90deg);
+    }
+    to{
+        transform: rotateY(0deg) rotateX(90deg);
+    }
+}
+#lado_g{
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 100px;
+}
+#lado_f{
+    background-color: rgb(255, 255, 255);
+    margin-top: 100px;
+}
 
 
 /* ═══════════════════════════════
