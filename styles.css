@@ -840,7 +840,7 @@ footer {
     }
 }
 #lado_d{
-    background-image: url(imagenes/16\ sin\ título_20251025190406_070532.jpg);
+    background-image: url(imagenes/imagenes1.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -850,7 +850,7 @@ footer {
 -moz-box-shadow:  0px 0px 43px 0px rgba(250, 0, 0);
 }
 #lado_c{
-    background-image: url(imagenes/Screenshot_20251025-220240-269.png);
+    background-image: url(imagenes/imagenes2.jpg);
     background-size: cover;
     background-position: center;
     animation-delay: -1s;
@@ -861,7 +861,7 @@ footer {
 -moz-box-shadow:  0px 0px 43px 0px rgba(42, 250, 0);
 }
 #lado_b{
-    background-image: url(imagenes/Screenshot_20251030-094112\ \(1\).png);
+    background-image: url(imagenes/imagenes3.jpg);
     background-size: cover;
     background-position: center;
     animation-delay: -2s;
@@ -873,7 +873,7 @@ footer {
 }
 
 #lado_a{
-    background-image: url(imagenes/Screenshot_20251030-094252\ \(1\)\ \(1\).png);
+    background-image: url(imagenes/imagenes4.jpg);
     background-size: cover;
     background-position: center;
     animation-delay: -3s;
